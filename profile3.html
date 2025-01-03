@@ -1,0 +1,152 @@
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - UiTM E-Profile</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <img src="img/Logo1.png" alt="Logo UiTM" width="100px">
+            <div class="title1">UNIVERSITI TEKNOLOGI MARA</div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                
+                    <!-- Sign Out Button -->
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-2" href="index.html" role="button">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background -->
+    <div class="hero-login-section">
+        <div class="hero-background">
+            <img src="img/border.jpg" alt="Hero Image">
+            <div class="overlay"></div>
+        </div>
+
+    <!-- Detailed Profile Section -->
+    <section class="container py-5 mt-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+
+                <!-- Profile 2 Image -->
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="profile-image-container mb-3">
+                        <img src="img/profile3.jpg" alt="Profile Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #ddd;">
+                        </div>
+                        <p class="text-muted mb-1">
+                        </p>
+                        <p class="text-muted">
+                            Bachelor of Information Science (Hons.) Information Systems Management
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-8">
+                
+                <!-- Detailed Information -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Personal Information</h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p><strong>Full Name:</strong> <span id="fullName"> Suhayl Murshidi Bin Mazlan</span></p>
+                                <p><strong>Student ID:</strong> <span id="studentIdDetail">2023636902</span></p>
+                                <p><strong>Program:</strong> <span id="program">CDIM262</span></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p><strong>Current CGPA:</strong> <span id="cgpa">3.70</span></p>
+                                <p><strong>Semester:</strong> <span id="semester">5</span></p>
+                                <p><strong>Status:</strong> Active</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Contact Information -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-4">Contact</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Phone Number</th>
+                                        <td>011-1008 3811</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>suhaylmurshidi@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Campus</th>
+                                        <td>Universiti Teknologi Mara Campus Puncak Perdana</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Personal Advisor</th>
+                                        <td>Amzari Bin Abu Bakar</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="academicRecords">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer --> 
+    <footer class="footer"> 
+        © 2024 Universiti Teknologi Mara. Afizul@Mustafa. All rights reserved.
+    </footer> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        function toggleTheme() {
+        const html = document.documentElement;
+        const icon = document.querySelector('.theme-toggle i');
+        
+        if (html.getAttribute('data-bs-theme') === 'dark') {
+            html.setAttribute('data-bs-theme', 'light');
+            icon.className = 'fas fa-moon';
+        } else {
+            html.setAttribute('data-bs-theme', 'dark');
+            icon.className = 'fas fa-sun';
+        }
+    }
+    </script>
+</body>
+</html>
